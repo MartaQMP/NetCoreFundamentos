@@ -28,12 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            btnPulsar = new Button();
+            openFileDialog1 = new OpenFileDialog();
+            txtNombre = new TextBox();
+            label1 = new Label();
+            SuspendLayout();
+            // 
+            // btnPulsar
+            // 
+            btnPulsar.BackColor = Color.Aqua;
+            btnPulsar.Location = new Point(49, 92);
+            btnPulsar.Name = "btnPulsar";
+            btnPulsar.Size = new Size(64, 30);
+            btnPulsar.TabIndex = 0;
+            btnPulsar.Text = "Pulsar";
+            btnPulsar.UseVisualStyleBackColor = false;
+            btnPulsar.Click += btnPulsar_Click;
+            // 
+            // openFileDialog1
+            // 
+            openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // txtNombre
+            // 
+            txtNombre.Location = new Point(49, 54);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(123, 23);
+            txtNombre.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(49, 36);
+            label1.Name = "label1";
+            label1.Size = new Size(123, 15);
+            label1.TabIndex = 2;
+            label1.Text = "Introduzca su nombre";
+            label1.Click += label1_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightCoral;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
+            Controls.Add(txtNombre);
+            Controls.Add(btnPulsar);
+            Name = "Form1";
             Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Button btnPulsar;
+        private OpenFileDialog openFileDialog1;
+        private TextBox txtNombre;
+        private Label label1;
     }
 }
