@@ -30,7 +30,22 @@ namespace NetCoreFundamentos
             int rojo = int.Parse(this.txtRojo.Text);
             int verde = int.Parse(this.txtVerde.Text);
             int azul = int.Parse(this.txtAzul.Text);
-            this.BackColor = Color.FromArgb(rojo, verde, azul);
+            if (rojo < 0 || rojo > 255)
+            {
+                MessageBox.Show("El valor del rojo debe estar comprendido entre 0 y 255");
+            }
+            else if (verde < 0 || verde > 255)
+            {
+                MessageBox.Show("El valor del verde debe estar comprendido entre 0 y 255");
+            }
+            else if (azul < 0 || azul > 255)
+            {
+                MessageBox.Show("El valor del azul debe estar comprendido entre 0 y 255");
+            }
+            else
+            {
+                this.BackColor = Color.FromArgb(rojo, verde, azul);
+            }
         }
 
         private void btnPosicion_Click(object sender, EventArgs e)
