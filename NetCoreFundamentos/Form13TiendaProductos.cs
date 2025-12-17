@@ -14,7 +14,6 @@ namespace NetCoreFundamentos
         {
             InitializeComponent();
             this.lstTienda.SelectionMode = SelectionMode.MultiExtended;
-            this.lstAlmacen.SelectionMode = SelectionMode.MultiExtended;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -68,11 +67,12 @@ namespace NetCoreFundamentos
 
         private void btnTodos_Click(object sender, EventArgs e)
         {
-            for (int i = (this.lstTienda.Items.Count - 1); i >= 0; i--)
+            this.lstAlmacen.Items.AddRange(this.lstTienda.Items);
+            /*for (int i = (this.lstTienda.Items.Count - 1); i >= 0; i--)
             {
                 this.lstAlmacen.Items.Add(this.lstTienda.Items[i]);
 
-            }
+            }*/
             this.lstTienda.Items.Clear();
         }
 
