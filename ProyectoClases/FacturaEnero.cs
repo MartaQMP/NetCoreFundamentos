@@ -13,7 +13,7 @@ namespace ProyectoClases
         {
             throw new NotImplementedException();
         }
-
+  
         public void OdioHacienda(int mucho)
         {
             throw new NotImplementedException();
